@@ -69,7 +69,7 @@ ngrok http 8080
 
 
 ## Unit Testing
-
+- Change directory to `app-mandrill-webhook/tests`
 - Run the following command - `python3 -m unittest discover <relative path name>`
 
 Example - 

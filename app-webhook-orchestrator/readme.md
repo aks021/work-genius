@@ -34,6 +34,6 @@ python3 main.py
 
 
 ### Unit Testing
-
+- Change directory to `app-webhook-orchestrator/tests`
 - Run the following command - `python3 -m unittest discover <relative path name>`
     - Example - `python3 -m unittest discover ./utility/structure`
