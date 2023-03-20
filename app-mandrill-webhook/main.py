@@ -5,7 +5,7 @@ from src.router import base
 from src.router.v1 import api
 from src.models.models import ExceptionResponseModel
 from fastapi.middleware.cors import CORSMiddleware
-from src.utility.utils import load_yaml_config
+from src.utility.utils import load_yaml_config, getenv
 import os
 import socketio
 import pymongo
@@ -63,8 +63,6 @@ def run_app(app_config: dict) -> None:
 
 
 if __name__ == "__main__":
-    env = os.environ.get(
-        "APP_ENV", "development"
-    )
+    env = getenv()
     config = load_yaml_config(f"config/{env}.yml")
     run_app(config)

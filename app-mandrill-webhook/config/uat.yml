@@ -1,0 +1,11 @@
+fastapi:
+    host: 0.0.0.0
+    port: 8080
+mongodb:
+    host: localhost
+    port: 27017
+    db_name: mandril_db
+    db_collection: mandril_collection
+websocket:
+    host: 0.0.0.0
+    port: 5005

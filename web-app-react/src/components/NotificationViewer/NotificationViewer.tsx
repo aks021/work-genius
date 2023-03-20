@@ -5,9 +5,9 @@ interface NotificationViewerProps {
 }
 export const NotificationViewer = (props: NotificationViewerProps) => {
     return(
-        <>
+        <div data-testid="notification-viewer-component-ctn">
             {props.notificationList.map((notification, index) => 
                 <p key = {index}>{notification}</p>
             )}
-        </>)
+        </div>)
 }

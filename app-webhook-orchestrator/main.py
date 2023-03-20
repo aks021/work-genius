@@ -27,7 +27,7 @@ def disconnect(sid):
 
 if __name__ == '__main__':
     env = os.environ.get(
-        "APP_ENV", "development"
+        "APP_ENV", "dev"
     )
     config = load_yaml_config(f"config/{env}.yml")
     web.run_app(app, host=config["websocket"]["host"], port=config["websocket"]["port"])

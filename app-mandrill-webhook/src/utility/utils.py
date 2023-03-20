@@ -14,11 +14,11 @@ def getenv():
     """
     About: Returns the app environment
     Args:: None
-    Returns: app env - development or uat or prod
+    Returns: app env - dev or uat or prod
     """
     env = os.environ.get(
-        "APP_ENV", "development"
-    )  # env defaults to development for dev purpose, in docker APP_ENV is set
+        "APP_ENV", "dev"
+    )  # env defaults to dev for dev purpose, in docker APP_ENV is set
     return env
 
 def load_yaml_config(config_file_rel_path: str) -> Dict:

@@ -1,7 +1,7 @@
 ## App Mandril Webhook
 
 ### About
-A websocket server that receives data from mandril via python webhook (app-mandrill-webhook) and broadcasts the same to the connected web app clients (notification)
+A websocket server that receives data from mandril via python webhook (app-mandrill-webhook) and broadcasts the same to the connected web app clients
 
 
 ### Prerequisite - Tech stack
@@ -21,10 +21,16 @@ OR
 - Open terminal
 - Change directory to current folder - `/app-mandril-webhook/`
 - Run the following commands
-    - `python3 -m venv venv`
-    - `. venv/bin/activate`
-    - `pip install -r requirements.txt --proxy=""`
-    - `python3 main.py`
+
+```bash
+python3 -m venv venv
+
+. venv/bin/activate
+
+pip install -r requirements.txt --proxy=""
+
+python3 main.py
+```
 
 
 ### Unit Testing
