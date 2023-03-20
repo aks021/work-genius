@@ -1,6 +1,7 @@
 FROM node:18-alpine
 
 RUN apk add --no-cache python3 py3-pip
+RUN apk add mongodb=6.0.5
 
 ENV NODE_ENV development
 
@@ -19,16 +20,15 @@ WORKDIR /app/app-webhook-orchestrator
 RUN python3 -m venv venv \
     && . venv/bin/activate \
     && python3 -m pip install --upgrade pip --proxy=""\
-    && pip install -r requirements.txt --proxy=""\ 	
-    && nohup python3 main.py &
+    && pip install -r requirements.txt --proxy=""
+EXPOSE 6000
 
 WORKDIR /app/app-mandrill-webhook
 
 RUN python3 -m venv venv \
     && . venv/bin/activate \
     && python3 -m pip install --upgrade pip --proxy=""\
-    && pip install -r requirements.txt --proxy=""\ 	
-    && nohup python3 main.py &
+    && pip install -r requirements.txt --proxy=""
 EXPOSE 8080
 
 
@@ -38,4 +38,6 @@ RUN npm i
 RUN npm run build
 EXPOSE 3000
 
-CMD ["npm", "run", "start"]
+WORKDIR /app
+
+CMD ["sh", "startup.sh"]
