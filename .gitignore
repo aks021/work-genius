@@ -4,6 +4,6 @@ __pycache__
 *.coverage
 .pytest_cache
 .vscode
-web-app/.next
-web-app/node_modules
+web-app-react/.next
+web-app-react/node_modules
 .DS_Store
