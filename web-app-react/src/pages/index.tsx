@@ -18,7 +18,6 @@ export default function Home() {
     }
 
     function onMessage(value: string) {
-      console.log(value);
       setNotificationList(previous => [...previous, value]);
     }
 
@@ -33,8 +32,6 @@ export default function Home() {
     };
   }, []);
   
-  console.log(isSocketConnected);
-  console.log(notificationList);
   return (
     <>
       <div className={styles.description}>
