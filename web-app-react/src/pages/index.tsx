@@ -32,26 +32,9 @@ export default function Home() {
       socket.off('broadcast', onMessage);
     };
   }, []);
-  /*if (websocket){
-    websocket.onopen = function(e: any) {
-      console.log("[open] Connection established");
-      console.log("Sending to server");
-      websocket.send("My name is John");
-    };
-
-    websocket.onclose = function(event: any) {
-      if (event.wasClean) {
-        console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
-      } else {
-        console.log('[close] Connection died');
-      }
-    };
-
-    websocket.onerror = function(error: any) {
-      console.log(error);
-    };
-  }*/
   
+  console.log(isSocketConnected);
+  console.log(notificationList);
   return (
     <>
       <div className={styles.description}>

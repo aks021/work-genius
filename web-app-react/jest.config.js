@@ -4,4 +4,7 @@ module.exports = {
     coverageDirectory: 'coverage',
     testEnvironment: 'jsdom',
     setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+    moduleNameMapper: {
+        '\\.(p?css)$': '<rootDir>/styleMock.js',
+      },
 }

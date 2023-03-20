@@ -1,13 +1,15 @@
 import React from "react";
+import styles from './NotificationViewer.module.css';
 
 interface NotificationViewerProps {
     notificationList: string[]
 }
 export const NotificationViewer = (props: NotificationViewerProps) => {
     return(
-        <div data-testid="notification-viewer-component-ctn">
+        <>
             {props.notificationList.map((notification, index) => 
-                <p key = {index}>{notification}</p>
+                <div className={styles.NotificationCtn} 
+                key = {index}>{notification}</div>
             )}
-        </div>)
+        </>)
 }
