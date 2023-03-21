@@ -57,7 +57,7 @@ https://localhost:8080/webhook
 
 ## Steps to setup Test/Development environment
 
-We need a public IP address for https://localhost:8080
+We need a public IP address for https://localhost:8080, which can consume requests from Mandril
 - Install [ngrok](https://ngrok.com) and run
 
 ```bash
