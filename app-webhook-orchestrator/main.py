@@ -1,7 +1,7 @@
 from aiohttp import web
 import socketio
 from utility.log.log import Log
-from utility.utils import load_yaml_config
+from utility.utils import load_yaml_config, getenv
 import os
 
 sio = socketio.AsyncServer(cors_allowed_origins = "*")
@@ -26,8 +26,6 @@ def disconnect(sid):
 
 
 if __name__ == '__main__':
-    env = os.environ.get(
-        "APP_ENV", "dev"
-    )
+    env = getenv()
     config = load_yaml_config(f"config/{env}.yml")
     web.run_app(app, host=config["websocket"]["host"], port=config["websocket"]["port"])

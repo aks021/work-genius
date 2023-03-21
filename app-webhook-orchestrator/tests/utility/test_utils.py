@@ -8,13 +8,13 @@ from utility.utils import *
 class TestGenericUtils(unittest.TestCase):
     def test_getenv(self):
         env = getenv()
-        assert env == "development"
+        assert env == "dev"
 
-        os.environ["APP_ENV"] = "production"
+        os.environ["APP_ENV"] = "prod"
         env = getenv()
-        assert env == "production"
+        assert env == "prod"
     
     def test_load_yaml_config(self):
-        config = load_yaml_config('config/development.yml')
+        config = load_yaml_config('config/dev.yml')
         assert "websocket" in config.keys()
 
