@@ -17,7 +17,7 @@ A webhook interface that can process "open" event coming in from Mandril. The da
 - Linux (Ubuntu) - `sudo systemctl start mongod`
 
 ### Configure and start Webhook server
-- Go through the set-up steps mentioned in `app-webhook-orchestrator/readme.md`
+- Setup [app-webhook-orchestrator](../app-webhook-orchestrator/readme.md#setup)
 
 ### Install python dependencies and start
 Using setup.sh
