@@ -1,7 +1,16 @@
 FROM node:18-alpine
 
 RUN apk add --no-cache python3 py3-pip
-RUN apk add mongodb=6.0.5
+RUN apk add --update nodejs npm
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/main' >> /etc/apk/repositories
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/community' >> /etc/apk/repositories
+RUN apk update
+
+RUN apk add mongodb
+RUN apk add --no-cache mongodb-tools
+
+RUN rc-update add mongodb default
+RUN rc-service mongodb start
 
 ENV NODE_ENV development
 

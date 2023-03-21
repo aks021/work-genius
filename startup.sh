@@ -1,5 +1,3 @@
-systemctl start mongod
-
 cd app-webhook-orchestrator
 . venv/bin/activate
 nohup python3 main.py &
