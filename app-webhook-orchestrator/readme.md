@@ -10,16 +10,19 @@ A websocket server that receives data from mandril via python webhook (app-mandr
 
 ### Setup
 
-Using setup.sh
+Using `setup.sh`
 
 - Open terminal
-- Change directory to current folder - `/app-mandril-webhook/`
-- Run `setup.sh`
+- Change directory to current folder - `/app-webhook-orchestrator/`
+- Run 
+```bash 
+sh setup.sh
+```
 
 OR
 
 - Open terminal
-- Change directory to current folder - `/app-mandril-webhook/`
+- Change directory to current folder - `/app-webhook-orchestrator/`
 - Run the following commands
 
 ```bash

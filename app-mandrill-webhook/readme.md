@@ -20,11 +20,14 @@ A webhook interface that can process "open" event coming in from Mandril. The da
 - Setup [app-webhook-orchestrator](../app-webhook-orchestrator/readme.md#setup)
 
 ### Install python dependencies and start
-Using setup.sh
+Using `setup.sh`
 
 - Open terminal
 - Change directory to current folder - `/app-mandril-webhook/`
-- Run `setup.sh`
+- Run 
+```bash 
+sh setup.sh
+```
 
 OR
 
