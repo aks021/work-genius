@@ -1,12 +1,12 @@
-FROM node:18-alpine
-
-RUN apk add --no-cache python3 py3-pip
-RUN apk add --update nodejs npm
+FROM alpine:edge
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/main' >> /etc/apk/repositories
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/community' >> /etc/apk/repositories
 RUN apk update
+RUN apk add --no-cache mongodb
 
-RUN apk add mongodb
+RUN apk add --no-cache python3 py3-pip
+RUN apk add --update nodejs npm
+
 RUN apk add --no-cache mongodb-tools
 
 RUN rc-update add mongodb default
@@ -30,7 +30,7 @@ RUN python3 -m venv venv \
     && . venv/bin/activate \
     && python3 -m pip install --upgrade pip --proxy=""\
     && pip install -r requirements.txt --proxy=""
-EXPOSE 6000
+EXPOSE 5005
 
 WORKDIR /app/app-mandrill-webhook
 
